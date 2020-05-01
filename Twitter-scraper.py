@@ -36,3 +36,18 @@ with open('politician.txt', mode='r') as csv_file:
 # if not, create a list of twitterhandles.
 name = '@WhiteHouse'
 
+conn = sqlite3.connect('tweet.db')
+c = conn.cursor()
+# c.execute("""CREATE TABLE tweet (
+# 	unique_ID integer,
+# 	tweet_ID text,
+# 	tweet text,
+# 	tweet_dates date,
+# 	tweet_place text,
+# 	retweet_count integer,
+# 	followers integer,
+# 	location text,
+# 	friends_count integer,
+# 	user_created_account date)
+# 	""")
+
