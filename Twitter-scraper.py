@@ -24,7 +24,7 @@ api = tweepy.API(auth,wait_on_rate_limit=True,wait_on_rate_limit_notify=True)
 
 # if you have list of twitter handles as a separate file, read that file
 """ name = []
-with open('politician.txt', mode='r') as csv_file:
+with open('twitterHandles.txt', mode='r') as csv_file:
 	csv_reader = csv.DictReader(csv_file)
 	line_count = 0
 	for row in csv_reader:
@@ -50,4 +50,40 @@ c = conn.cursor()
 # 	friends_count integer,
 # 	user_created_account date)
 # 	""")
+
+# retrieiving tweets in the order of twitter handles, and by time
+for i in name:
+	counter = 0
+	print("*********************"+i+"*************************")
+	print("*********************"+i+"*************************")
+	print("*********************"+i+"*************************")
+	print("*********************"+i+"*************************")
+
+
+
+
+	for status in limit_handled(tweepy.Cursor(api.user_timeline, id=i).items()):
+
+		check = []
+
+		unique_tweet_id = (status._json['id'])
+		tweet_name = (status._json['user']['screen_name'])
+		tweet_id = (status._json['user']['name'])
+		a = api.get_status(unique_tweet_id, tweet_mode='extended')
+		text = a.full_text
+
+		check.append(unique_tweet_id)
+		check.append(tweet_id)
+		check.append(text)
+		check.append(tweet_name)
+
+		c.execute("INSERT INTO tweet VALUES (?,?,?,?)", (check))
+		
+		conn.commit()
+		
+		counter+=1
+	
+	print(counter)
+
+conn.close()
 
