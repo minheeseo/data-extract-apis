@@ -41,7 +41,7 @@ api = tweepy.API(auth,wait_on_rate_limit=True,wait_on_rate_limit_notify=True)
 
 
 
-Create a database with a table named as **tweet** using the following code. In addition to four features, one can add additoinal features such as dates, place, location, the number of retweets, and the number of followers. The purpose of this script is to simply extrating tweets, so I create a table as following. 
+Create a database with a table named as **tweet** using the following code. In addition to four features, one can add additional features such as dates, place, location, the number of retweets, and the number of followers. The purpose of this script is to simply extract tweets, so I create a table as following. 
 
 
 
@@ -76,7 +76,7 @@ text = a.full_text
 
 ### D. Additional features
 
-In addition to tweeter id, name, and tweets that this script collects, users can add informations they would like to retrieve. See [http://docs.tweepy.org/en/latest/api.html?highlight=screen_name#tweepy-api-twitter-api-wrapper](http://docs.tweepy.org/en/latest/api.html?highlight=screen_name#tweepy-api-twitter-api-wrapper). Examples include the number of friends or date of a tweeet posted.
+In addition to tweeter id, name, and tweets that this script collects, users can add informations they would like to retrieve. See [http://docs.tweepy.org/en/latest/api.html?highlight=screen_name#tweepy-api-twitter-api-wrapper](http://docs.tweepy.org/en/latest/api.html?highlight=screen_name#tweepy-api-twitter-api-wrapper). Examples include the number of friends or date of a tweet posted.
 
 
 
