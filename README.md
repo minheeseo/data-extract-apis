@@ -94,4 +94,4 @@ friends_count = (status._json['user']['friends_count'])
 Below is the snapshot of the results of tweets posed by ***@dog***. 
 
 <p align="center">
-<img src="dogtweet.png" width="60%" title="" alt="stlcitybill"></img><br/></p>
+<img src="dogtweet.png" width="90%" title="" alt="stlcitybill"></img><br/></p>
